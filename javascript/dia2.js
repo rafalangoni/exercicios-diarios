@@ -7,6 +7,13 @@ function myFunction(a, b) {
     console.log(false);
   }
 }
+function myFunction2(a, b) {
+  if (a === b) {
+    return true;
+  } else {
+    return false;
+  }
+}
 
-myFunction(2, "2");
-myFunction(2, 2);
+console.log(myFunction2(2, "2"))  
+console.log(myFunction2(2, 2))
