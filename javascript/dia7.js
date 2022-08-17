@@ -8,4 +8,4 @@ function criaChaveObjeto(chave){
     }
 }
 
-console.log(criaChaveObjeto("zé"))
+console.log(criaChaveObjeto("zé"));
