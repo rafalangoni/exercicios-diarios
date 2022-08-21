@@ -1,6 +1,5 @@
 const EXPECTED_MINUTES_IN_OVEN = 40;
 
-
 function remainingMinutesInOven(tempoPassado){
     return EXPECTED_MINUTES_IN_OVEN - tempoPassado; 
 }
@@ -10,7 +9,7 @@ function preparationTimeInMinutes(camadasDeLasanha){
 }
 
 function actualMinutesInOven (camadasDeLasanha, tempoAtual){
-    return (camadasDeLasanha * 2) + tempoAtual;
+    return preparationTimeInMinutes(camadasDeLasanha) + remainingMinutesInOven(tempoAtual);
 }
 
-console.log(actualMinutesInOven(1,20))
+console.log(actualMinutesInOven(4,20))
