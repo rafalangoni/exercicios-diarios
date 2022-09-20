@@ -2,17 +2,15 @@ let arrayNumerosSorteados = [];
 const geraNumeros = (quantidadeDeNumeros) => {
   for (let i = 0; i < quantidadeDeNumeros; i++) {
     let numeroJaSorteado = 0;
-    let numeroSorteado = parseInt(Math.random() * 60);
+    let numeroSorteado = 1 + parseInt(Math.random() * 60);
 
-    numeroJaSorteado = numeroSorteado;
-
-    while (numeroJaSorteado == numeroSorteado) {
-      numeroSorteado = parseInt(Math.random() * 60);
+    if (numeroSorteado === numeroJaSorteado) {
+      numeroSorteado = 1 + parseInt(Math.random() * 60);
+      numeroJaSorteado = numeroSorteado;
     }
-    numeroJaSorteado = numeroSorteado;
 
     arrayNumerosSorteados.push(numeroSorteado);
-    arrayNumerosSorteados.sort();
+    arrayNumerosSorteados.sort((a, b) => a - b);
   }
   return arrayNumerosSorteados;
 };
