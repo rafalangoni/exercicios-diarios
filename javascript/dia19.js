@@ -2,7 +2,7 @@
 // Extract the last 3 characters from the string
 // Return the result
 
-function retorna3UltimosCaracteres(texto) {
+const retorna3UltimosCaracteres = (texto) => {
   return texto.slice(-3);
 }
 
